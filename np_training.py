@@ -21,3 +21,21 @@ print(a[1::3])
 
 a = np.array([[1,2,3],[3,4,5],[4,5,6]])
 print(a[:,1:])
+
+a = np.arange(0,60,5)
+a = a.reshape(3,4)
+b=a.T
+print(a)
+print(b)
+
+a = np.arange(0,60,5)
+a = a.reshape(3,4)
+print('原始数组是：')
+print (a )
+for x in np.nditer(a, op_flags=['readwrite']):
+    x[...]=2*x
+print('修改后的数组是：')
+print(a)
+
+a = np.arange(8).reshape(2,4)
+print(a.flatten(order = 'k'))
