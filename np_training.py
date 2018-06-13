@@ -39,3 +39,27 @@ print(a)
 
 a = np.arange(8).reshape(2,4)
 print(a.flatten(order = 'k'))
+
+x = np.array([[1], [2], [3]])
+y = np.array([4, 5, 6])
+# 对 y 广播 x
+b = np.broadcast(x,y)
+
+print('广播对象的形状：')
+print(b.shape)
+
+a = np.array([0,30,45,60,90])
+print('不同角度的正弦值：')
+# 通过乘 pi/180 转化为弧度
+print(np.sin(a*np.pi/180)  )
+
+a = np.array([-1.7,  1.5,  -0.2,  0.6,  10])
+print(np.floor(a))
+print(np.ceil(a))
+
+a = np.array([[30,40,70],[80,20,10],[50,90,60]])
+print(np.percentile(a,90,axis=0))
+print(np.median(a,0))
+
+x = np.array([3,  1,  2])
+print(np.argsort(x))
